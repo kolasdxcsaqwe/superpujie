@@ -5,3 +5,15 @@ https://gci.f6dh.com/magingame/NewPlaza3/
 https://e04-01.cdnp1.com/mobile/E04/h5app.json
 https://hj-a.xibuly.com/app/android/upgrade/app-release.apk
 https://hj-a.xibuly.com/app/android/upgrade/app-release.apk
+
+//"(?<=ns\\=\\[).*?(?=\\])"
+    //"(?<=ns\\=\\【).*?(?=\\】)"
+    public static void getTeacherList(String managers) {
+        Pattern pattern = Pattern.compile("(?<=ns\\=\\【).*?(?=\\】)");
+        Matcher matcher = pattern.matcher(managers);
+        while (matcher.find()) {
+            String str = matcher.group();
+            System.err.println(str);
+        }
+
+    }
