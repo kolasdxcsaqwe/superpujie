@@ -21,3 +21,4 @@ https://yl-a.fdafah.com/app/android/upgrade/app-release.apk
 rndvpn01@outlook.com
 1qaz@WSX
 https://e03-01.cdnp1.com/mobile/E03/h5app.json
+Attempt to invoke interface method 'void android.app.INotificationManager.enqueueToast(java.lang.String, android.app.ITransientNotification, int)' on a null object reference
