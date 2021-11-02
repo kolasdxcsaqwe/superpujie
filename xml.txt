@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/n_title_bg"
+    >
+
+    <com.nwf.app.ui.views.NTitleBar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/com_homepage_introduce_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="@string/n_homepage_records"
+        app:moreImageShow="true"
+        />
+    <FrameLayout
+        android:id="@+id/flayout_record"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:visibility="gone"
+        />
+    <com.tencent.smtt.sdk.WebView
+        android:id="@+id/wv_homepage_introduce_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>
+
+  api 'com.tencent.tbs.tbssdk:sdk:43939'
