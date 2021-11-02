@@ -24,3 +24,4 @@ https://e03-01.cdnp1.com/mobile/E03/h5app.json
 Attempt to invoke interface method 'void android.app.INotificationManager.enqueueToast(java.lang.String, android.app.ITransientNotification, int)' on a null object reference
 11-02 15:57:57.989 5094-5322/com.ylgj.app E/chromium: [ERROR:context_group.cc(249)] ContextResult::kFatalFailure: maximum uniform buffer bindings is too small (0, should be 24).
 https://site.cq9web.com/common/#/activities
+Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
