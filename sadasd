@@ -6,17 +6,6 @@ https://e04-01.cdnp1.com/mobile/E04/h5app.json
 https://hj-a.xibuly.com/app/android/upgrade/app-release.apk
 https://hj-a.xibuly.com/app/android/upgrade/app-release.apk
 
-//"(?<=ns\\=\\[).*?(?=\\])"
-    //"(?<=ns\\=\\【).*?(?=\\】)"
-    public static void getTeacherList(String managers) {
-        Pattern pattern = Pattern.compile("(?<=ns\\=\\【).*?(?=\\】)");
-        Matcher matcher = pattern.matcher(managers);
-        while (matcher.find()) {
-            String str = matcher.group();
-            System.err.println(str);
-        }
-
-    }
 https://yl-a.fdafah.com/app/android/upgrade/app-release.apk
 rndvpn01@outlook.com
 1qaz@WSX
@@ -25,3 +14,4 @@ Attempt to invoke interface method 'void android.app.INotificationManager.enqueu
 11-02 15:57:57.989 5094-5322/com.ylgj.app E/chromium: [ERROR:context_group.cc(249)] ContextResult::kFatalFailure: maximum uniform buffer bindings is too small (0, should be 24).
 https://site.cq9web.com/common/#/activities
 Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
+https://ylh5.h5iw08pjou.com/js/app.6d4dffcd.js
