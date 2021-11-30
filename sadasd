@@ -19,21 +19,24 @@ hjyl://eyJpc1ZpcCI6IjAiLCJhZ2VudElkIjoiMTAwMTY0NTUyNCIsImRvbWFpbiI6Im0ueW9uZzMyO
 https://gwapi.czsjnp.com/callbackUrlRedirect?method=et&userName=null&timestamp=1636597477346&key=45a6bc6d56e0fe35e9657dc3c9dd901a&gmId=E04064
 
 
- public static String setValueByName(String url, String name,String value) {
-        Log.e("setValueByName1",url);
+public static String setValueByName(String url, String name,String value) {
         int index = url.indexOf("?");
         String temp = url.substring(index + 1);
         StringBuilder sb=new StringBuilder();
-        sb.append(temp);
+        sb.append(url.substring(0,index+1));
 
         String[] keyValue = temp.split("&");
 
         boolean isExits=false;
         for (String str : keyValue) {
+            sb.append("&");
             if (str.contains(name+"=")) {
                 isExits=true;
-                str.replace()
-                break;
+                sb.append(name).append("=").append(value);
+            }
+            else
+            {
+                sb.append(str);
             }
         }
 
@@ -41,6 +44,5 @@ https://gwapi.czsjnp.com/callbackUrlRedirect?method=et&userName=null&timestamp=1
         {
             sb.append("&").append(name).append("=").append(value);
         }
-        Log.e("setValueByName2",sb.toString());
         return sb.toString();
     }
