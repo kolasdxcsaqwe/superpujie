@@ -18,31 +18,4 @@ https://ylh5.h5iw08pjou.com/js/app.6d4dffcd.js
 hjyl://eyJpc1ZpcCI6IjAiLCJhZ2VudElkIjoiMTAwMTY0NTUyNCIsImRvbWFpbiI6Im0ueW9uZzMyOC5jb20iLCJycF9jb2RlIjoiIn0=
 https://gwapi.czsjnp.com/callbackUrlRedirect?method=et&userName=null&timestamp=1636597477346&key=45a6bc6d56e0fe35e9657dc3c9dd901a&gmId=E04064
 
-
-public static String setValueByName(String url, String name,String value) {
-        int index = url.indexOf("?");
-        String temp = url.substring(index + 1);
-        StringBuilder sb=new StringBuilder();
-        sb.append(url.substring(0,index+1));
-
-        String[] keyValue = temp.split("&");
-
-        boolean isExits=false;
-        for (String str : keyValue) {
-            sb.append("&");
-            if (str.contains(name+"=")) {
-                isExits=true;
-                sb.append(name).append("=").append(value);
-            }
-            else
-            {
-                sb.append(str);
-            }
-        }
-
-        if(!isExits)
-        {
-            sb.append("&").append(name).append("=").append(value);
-        }
-        return sb.toString();
-    }
+https://bom.8hf2sladksf.com:9021/version.txt
