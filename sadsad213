@@ -1,1 +1,64 @@
 
+private void getRPCodeFromPastePanel()
+    {
+        ClipboardManager clipboardManager=(ClipboardManager) getApplication().getSystemService(Context.CLIPBOARD_SERVICE);
+        if(clipboardManager!=null)
+        {
+            if(clipboardManager.hasPrimaryClip() && clipboardManager.getPrimaryClip().getItemCount()>0)
+            {
+                if(clipboardManager.getPrimaryClip()!=null && clipboardManager.getPrimaryClip().getItemAt(0)!=null
+                        && clipboardManager.getPrimaryClip().getItemAt(0).getText()==null)
+                {
+                    return;
+                }
+                String TEXT=clipboardManager.getPrimaryClip().getItemAt(0).getText().toString();
+                if(!TextUtils.isEmpty(TEXT) && TEXT.startsWith("hjyl"))
+                {
+                    try {
+                        TEXT= new String(Base64.decode(TEXT.substring(7).getBytes(),Base64.DEFAULT), Charset.forName("UTF8"));
+                    }
+                    catch (Exception ex)
+                    {
+                        TEXT= null;
+                    }
+
+                }
+                else
+                {
+                    return;
+                }
+
+                String Channelid= SPTool.get(ConstantValue.CHANNELID,"");
+                String DOMAINNAME=SPTool.get(ConstantValue.DOMAINNAME,"");
+                if(!TextUtils.isEmpty(Channelid) && !TextUtils.isEmpty(DOMAINNAME))
+                {
+                    //只取第一次获取的
+                    return;
+                }
+
+                if(TextUtils.isEmpty(TEXT))
+                {
+                    return;
+                }
+
+                ChannelBean channelBean = new Gson().fromJson(TEXT, ChannelBean.class);
+                if(channelBean==null)return;
+
+                if (!TextUtils.isEmpty(channelBean.getAgentId())) {
+                    SPTool.put(ConstantValue.CHANNELID, channelBean.getAgentId());
+                }
+                if (!TextUtils.isEmpty(channelBean.getDomain())) {
+                    SPTool.put(ConstantValue.DOMAINNAME, channelBean.getDomain());
+                }
+
+                if (!TextUtils.isEmpty(channelBean.getRpCode())) {
+                    SPTool.put(ConstantValue.RPCODE, channelBean.getRpCode());
+                }
+
+                if (!TextUtils.isEmpty(channelBean.getIsVip())) {
+                    SPTool.put(ConstantValue.ISVIP, channelBean.getIsVip());
+                }
+                Log.d("getRPCodeFromPastePanel", channelBean.toString());
+            }
+        }
+    }
