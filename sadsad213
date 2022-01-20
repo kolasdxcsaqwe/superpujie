@@ -1,2 +1,42 @@
 
-https://hj-a.xibuly.com/app/android/upgrade/app-release.apk 
+新增收件地址
+
+接口名称：/api/activity/addReceiveAddress
+
+请求方式：POST
+
+需要的参数
+@Field("orderId") String orderId,
+                                                                @Field("receiver") String receiver,
+                                                                @Field("phone") String phone,
+                                                                @Field("detailAddress") String detailAddress
+                                                                
+                                                                
+                                                                
+ 首页弹窗接口 api/activity/all/e03QueryNewYearAlert
+ 
+myWishPrize这个字段（object 不是数组）
+
+/**
+         * orderId : E031002846538
+         * issue : 20220121
+         * prizeName : 欧米伽手表一只
+         * createdDate : 2022-01-20 09:57:03
+         * number : 97893
+         * playType : 3
+         * status : 1
+         * openNumber : 9,7,8,9,3
+         * realOrderStatus : 0
+         * rn : 1
+         */
+
+        private String orderId;
+        private String issue;
+        private String prizeName;
+        private String createdDate;
+        private String number;
+        private int playType;
+        private int status;
+        private String openNumber;
+        private int realOrderStatus;
+        private int rn;
