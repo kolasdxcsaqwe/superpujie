@@ -24,3 +24,44 @@ https://bom.8hf2sladksf.com:9021/version.txt
 3.点击特殊应用权限 在管理页面,找到并点击特殊应用权限选项。
 4.选择安装未知应用 在弹出的页面里面,点击进入安装未知应用选项。
 hjyl://eyJpc1ZpcCI6IjAiLCJhZ2VudElkIjoiMTAwMzAzODEzMyIsImRvbWFpbiI6Im0uMTA2MWguY29tIiwicnBfY29kZSI6IiJ9
+
+  private static class HandlerProxy extends Handler {
+
+        private Handler mHandler;
+
+        public HandlerProxy(Handler handler) {
+            this.mHandler = handler;
+        }
+
+        @Override
+        public void handleMessage(Message msg) {
+            try {
+                mHandler.handleMessage(msg);
+            } catch (WindowManager.BadTokenException e) {
+                //ignore
+            }
+        }
+    }
+    
+     public static void hookToast(Toast toast) {
+        Class<Toast> cToast = Toast.class;
+        try {
+            //TN是private的
+            Field fTn = cToast.getDeclaredField("mTN");
+            fTn.setAccessible(true);
+
+            //获取tn对象
+            Object oTn = fTn.get(toast);
+            //获取TN的class，也可以直接通过Field.getType()获取。
+            Class<?> cTn = oTn.getClass();
+            Field fHandle = cTn.getDeclaredField("mHandler");
+
+            //重新set->mHandler
+            fHandle.setAccessible(true);
+            fHandle.set(oTn, new HandlerProxy((Handler) fHandle.get(oTn)));
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
