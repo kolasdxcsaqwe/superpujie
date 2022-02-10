@@ -40,3 +40,6 @@ myWishPrize这个字段（object 不是数组）
         private String openNumber;
         private int realOrderStatus;
         private int rn;
+        
+        
+            java.lang.IllegalArgumentException: Requested window android.os.BinderProxy@f4bda57 does not exist
