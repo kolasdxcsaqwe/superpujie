@@ -1,0 +1,48 @@
+@Override
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+super.onActivityResult(requestCode, resultCode, data);
+if(resultCode == RESULT_OK){
+switch(requestCode){
+case REQUEST_CODE:
+Cursor cursor = null;
+
+String photo_path = "";//照片路径
+
+String[] proj = { MediaStore.Images.Media.DATA};  
+                cursor = getContentResolver().query(data.getData(), proj, null, null, null);  
+if (cursor.moveToFirst()) {
+photo_path = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA));
+//api>=19时，photo_path的值为null，此时再做处理
+if(photo_path == null) {
+String wholeID = getDocumentId(data.getData());
+    String id = wholeID.split(":")[1];
+    String[] column = { MediaStore.Images.Media.DATA };
+    String sel = MediaStore.Images.Media._ID +"=?";
+    cursor = getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, column, sel, new String[] { id }, null);
+   int columnIndex = cursor.getColumnIndex(column[0]);
+    if (cursor.moveToFirst())
+    photo_path = cursor.getString(columnIndex);//此时的路径为照片路径
+}
+}
+cursor.close();
+
+break;
+
+}
+
+}
+
+
+
+
+private static final String PATH_DOCUMENT = "document";
+public static String getDocumentId(Uri documentUri) {
+        final List paths = documentUri.getPathSegments();
+        if (paths.size() < 2) {
+            throw new IllegalArgumentException("Not a document: " + documentUri);
+        }
+        if (!PATH_DOCUMENT.equals(paths.get(0))) {
+            throw new IllegalArgumentException("Not a document: " + documentUri);
+        }
+        return paths.get(1);
+   }
