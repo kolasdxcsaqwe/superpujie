@@ -4,23 +4,10 @@ https://drive.google.com/file/d/1-DJF4kVAgR69GQIeePnzcNuE7LgW6Yxx/view?usp=drive
 cc64ebc7c56f3fd8afe35e0d748aee0e
 
 https://drive.google.com/file/d/1MtNL4kCS0juwKy0y4wIpNaJlOOWOug32/view?usp=drivesdk
+[Err] 1100 - Table 'fn_codeapi' was not locked with LOCK TABLES
+[Err] --
+-- Table structure for table `fn_codeapi`
+--
 
-　　NAVC-KAIA-NU5I-SPOX
-
-　　NAVL-FE27-KNTQ-YJXC
-
-　　NAVK-LXKO-3XHL-HC5T
-
-　　NAVI-EM52-4TQV-GYYB
-
-　　NAVN-HQKB-TGPA-FNNL
-
-　　NAVI-IQLT-MUDA-MMII
-
-　　NAVK-E42T-YX5H-CR2L
-
-　　NAVH-2BMX-HJ6J-S5NP
-
-　　NAVO-FLPD-Q5IS-HTKY
-
-　　NAVJ-IFVK-YR2N-TGEL
+DROP TABLE IF EXISTS `fn_codeapi`;
+[Msg] Finished - Unsuccessfully
