@@ -1,13 +1,15 @@
+raksmart.com
 
-https://drive.google.com/file/d/1-DJF4kVAgR69GQIeePnzcNuE7LgW6Yxx/view?usp=drivesdk
+日本服务器:107.148.1.49
+auth question:What is your favorite Moive?-->007
+Account:4318471pk1@gmail.com
+Password:123qwe!@#
 
-cc64ebc7c56f3fd8afe35e0d748aee0e
+小皮面板
+外网:http://107.148.1.49:9080/3274A4
+内网:http://107.148.1.49:9080/3274A4
+系统初始账号:admin
+系统初始密码:456euiw
+60af1b42597d92cb
+d28c81ee7679392d
 
-https://drive.google.com/file/d/1MtNL4kCS0juwKy0y4wIpNaJlOOWOug32/view?usp=drivesdk
-[Err] 1100 - Table 'fn_codeapi' was not locked with LOCK TABLES
-[Err] --
--- Table structure for table `fn_codeapi`
---
-
-DROP TABLE IF EXISTS `fn_codeapi`;
-[Msg] Finished - Unsuccessfully
