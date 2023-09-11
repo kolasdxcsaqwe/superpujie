@@ -10,6 +10,26 @@ Password:123qwe!@#
 内网:http://107.148.1.49:9080/3274A4
 系统初始账号:admin
 系统初始密码:456euiw
-60af1b42597d92cb
-d28c81ee7679392d
+2d06fc7ea8bd0c2f
+ecd5f88b7daece79
 
+客服系统
+http://107.148.1.49:9090/
+账号:admin 密码:1425904916
+
+App_key
+3331333731383036
+App_secret
+6842a54e4aab6e22bf368e5b7291efdf
+App_id
+232
+websocket 地址
+ws://107.148.1.49:9090
+Api 地址
+http://107.148.1.49:9090
+websocket 端口
+9090
+Api 端口
+2080
+registToken
+1425904916
