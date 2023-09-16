@@ -1,39 +1,31 @@
-raksmart.com
+服务器官网：raksmart.com
+
+cloundflare
+账号密码 4318471pk1@gmail.com Freestyle123456!@#
 
 日本服务器:107.148.1.49
 auth question:What is your favorite Moive?-->007
 Account:4318471pk1@gmail.com
 Password:123qwe!@#
 
-小皮面板
+微信页面（前台）
+http://x6hecp.store/?room=123123&agent=o2jGt59ZQMCVILNs0Lkv5EsUOPmU
+
+小皮面板(后台)
 外网:http://107.148.1.49:9080/3274A4
 内网:http://107.148.1.49:9080/3274A4
 系统初始账号:admin
 系统初始密码:456euiw
-2d06fc7ea8bd0c2f
-ecd5f88b7daece79
+数据库 root Hs_82l123d 
 
-客服系统
-http://107.148.1.49:9090/
-账号:admin 密码:1425904916
+客服信息系统
+后台
+http://107.148.50.84:8035
+前台
+http://107.148.50.84:8035/im/text/104eac.html
 
-App_key
-3331333731383036
-App_secret
-6842a54e4aab6e22bf368e5b7291efdf
-App_id
-232
-websocket 地址
-ws://107.148.1.49:9090
-Api 地址
-admin
-da3.1415926tang
-http://kf6.join999.xyz/admin/login/index/business_id/1.html
-http://107.148.1.49:9090
-websocket 端口
-9090
-Api 端口
-2080
-registToken
-1425904916
-http://x6hecp.store/home/user/wxlogin?agent=o2jGt59ZQMCVILNs0Lkv5EsUOPmU&room=123123&code=051uA0000Lb8GQ1kJQ100l0loZ0uA00I&state=STATE
+管理员
+admin admin1234
+
+客服1号
+cs111 123qwe
